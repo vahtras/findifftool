@@ -9,13 +9,13 @@ deploy:
     secure: FjuwsjLZdGNw/+BGJcwkzj0mEQkKbY2Yya+f7RjZW1ynXGMRGuvZtf+Qa3D0SsHXRKqz7y4+1kWJC0bqOKb+oFr9wfPABhVEXrcwFTEqKEJb9+u4pWMbesRRzT2pAtqzmdd+ufSYZiXdCXj1NU+U2SJJVg6JVXm/33mfvqIKRtFmZc+++15DVAJcJKAs8C30svtYD0O0ewSmISqpmZX9MGUXffH41+YSVvtYzyQUFGuBfoEUPxnJQVKwqNMaCBlA2+WnbKBGqvPF8IevQvPvj0ku+LvuupQWAKCYzN1XHck+CPeoQiiqcz0pvDcT6yMWmrrX7413KdUWc1otOqnpWxpKTkrFXm1yjDeFbIVi85Ii+dWfJ4lBkIxK1JF4WOPTi9qaoVB8IgF5ffWwifFUzw4M8y/5iwle8EmEbOkVt0gGK3wcsnPsNFKeagcSnB0ntjT2ExcZ1jk0vl3rmvyJrK3ZUPbHzRLEbzLT4NR5VbnRnagRumql+mnABYzLSJOMHBOJjnq7/CkywgfbnW1GKMl18L+2ReEAA30O7/w9EhRufG5/E+8z1NbRYrNO4mLYuYGFZIWesu1AHQkBIAT/7ePPHi2TWPU1+konQBtDljfcmqo/YvMtSTWBNE/tqWgpnH4SgvhAWlPwoQQn+lnWqxH5g3etfr6f7ec5jQPWL4k=
   provider: pypi
   user: vahtras
-env:
-- TOXENV=py35
-- TOXENV=py34
-- TOXENV=py33
-- TOXENV=py27
-- TOXENV=py26
-- TOXENV=pypy
+#env:
+#- TOXENV=py35
+#- TOXENV=py34
+#- TOXENV=py33
+#- TOXENV=py27
+#- TOXENV=py26
+#- TOXENV=pypy
 #install: pip install -U tox
 before_install:
   - wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh;
