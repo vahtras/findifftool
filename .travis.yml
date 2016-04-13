@@ -25,6 +25,7 @@ before_install:
 install:
   - conda install --yes python=$TRAVIS_PYTHON_VERSION pip numpy scipy pytest mock
   - pip install pep8 python-coveralls
+  - pip install -r requirements_dev.txt
 language: python
 python:
   - "2.7"
