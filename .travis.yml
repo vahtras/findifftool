@@ -21,4 +21,6 @@ language: python
 python:
   - "2.7"
   - "3.5"
-script: tox
+#script: tox
+script:
+ - python -m pytest
