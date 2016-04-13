@@ -24,7 +24,7 @@ test_requirements = [
 
 setup(
     name='findifftool',
-    version='0.1.0',
+    version='0.1.1',
     description="Tools to generate finite difference gradients and Hessians of numerical functions",
     long_description=readme + '\n\n' + history,
     author="Olav Vahtras",
