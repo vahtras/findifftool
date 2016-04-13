@@ -31,4 +31,4 @@ python:
   - "3.5"
 #script: tox
 script:
- - python -m pytest
+ - python -m pytest -v tests
