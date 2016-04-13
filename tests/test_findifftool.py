@@ -24,9 +24,6 @@ class TestFindifftool(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_000_something(self):
-        pass
-
     def test_scalar_gradient(self):
         def f(x):
             return x**2

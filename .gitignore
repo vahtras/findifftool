@@ -44,6 +44,7 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+.pytest.restart
 
 # Translations
 *.mo
@@ -57,3 +58,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# VirtualEnv
+venv*

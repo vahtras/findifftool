@@ -13,7 +13,7 @@ Functions:
 
 import numpy
 from .attributes import get_method_and_copy_of_attribute
-DELTA = 1e-5
+DELTA = 5e-5
 
 def grad(f, delta=DELTA):
     """
@@ -77,15 +77,15 @@ def ndgrad(f, delta=DELTA):
     Output: gradient function object
     """
     def grad_f(*args, **kwargs):
-        x, = args
+        x = args[0]
         grad_val = numpy.zeros(x.shape)
         it = numpy.nditer(x, op_flags=['readwrite'], flags=['multi_index'])
         for xi in it:
             i = it.multi_index
             xi += delta/2
-            fp = f(x)
+            fp = f(*args, **kwargs)
             xi -= delta
-            fm = f(x)
+            fm = f(*args, **kwargs)
             xi += delta/2
             grad_val[i] = (fp - fm)/delta
         return grad_val
@@ -99,7 +99,7 @@ def ndhess(f, delta=DELTA):
     Output: hessian function object
     """
     def hess_f(*args, **kwargs):
-        x, = args
+        x = args[0]
         hess_val = numpy.zeros(x.shape + x.shape)
         it = numpy.nditer(x, op_flags=['readwrite'], flags=['multi_index'])
         for xi in it:

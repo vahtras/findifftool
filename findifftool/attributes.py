@@ -1,3 +1,5 @@
+from functools import reduce
+
 def get_method_and_copy_of_attribute(obj, meth, attr):
 
     f = return_method(obj, meth)
