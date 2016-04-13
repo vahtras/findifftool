@@ -267,15 +267,14 @@ class TestFindifftool(unittest.TestCase):
 
     def test_CTC(self):
 
-        from util import full
 
         class Nod(object):
             #
             #
             # Class global variables
             #
-            S = full.init([[1., .1], [.1, 1.]])
-            C = full.init([[.7, .6], [.6, -.7]])
+            S = numpy.array([[1., .1], [.1, 1.]])
+            C = numpy.array([[.7, .6], [.6, -.7]])
 
             def __init__(self, astring, bstring, C=None, tmpdir='/tmp'):
                 #
@@ -302,15 +301,15 @@ class TestFindifftool(unittest.TestCase):
                 #
                 Det = 1
                 if CKa is not None:
-                    SKLa = CKa.T*Nod.S*CLa
-                    Deta = SKLa.det()
+                    SKLa = numpy.dot(CKa.T, numpy.dot(Nod.S, CLa))
+                    Deta = numpy.linalg.det(SKLa)
                     Det *= Deta
                 #
                 # beta
                 #
                 if CKb is not None:
-                    SKLb = CKb.T*Nod.S*CLb
-                    Detb = SKLb.det()
+                    SKLb = numpy.dot(CKb.T, numpy.dot(Nod.S, CLb))
+                    Detb = numpy.linalg.det(SKLb)
                     Det *= Detb
                 #
                 return Det
